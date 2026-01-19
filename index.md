@@ -2,15 +2,12 @@
 Welcome to my ICS3UR portfolio. I’ll use this site to post my work and reflections.
 
 ## Highlights
-- 🔧 Project 1: *(title)* – *(1–2 lines about what it does)*
-- 🧠 Concept I learned: *(short note)*
-- 📝 Blog/Reflection: [IC3UR Culminating Reflection](./posts/ics3urreflection.md)
-- [Reflection #2](./posts/second.md)
+- 📝 Culminating Reflection: [IC3UR Culminating Reflection](./posts/ics3urreflection.md)
 
 ---
 
 ## About me
-A short intro (interests, goals, tools I’m learning).
+Hello, my name is Lukas and I am interested in coding and anything to do with computers! I've taken my interest to this Comp Sci class to enhance both my learning and skills within computers, in the future I hope I can build impactful projects that have a purpose.
 
 
 
