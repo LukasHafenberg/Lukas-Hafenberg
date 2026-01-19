@@ -1,4 +1,4 @@
-# ICS3UR Culminating Reflection
+# Culminating Reflection
 
 ---
 
