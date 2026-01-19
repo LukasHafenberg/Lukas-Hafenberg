@@ -9,7 +9,7 @@ The planning week is arguably one of the most important parts of this culminatin
 # Repition Structure
 
 The loop implementation I will be choosing to explain is the most important loop I will use and currently use throughout my code, in the snippet of my for loop below, you can see that I use another for loop inside of a for loop, these two loops are used to make the positions for where symbols will be placed with the rows and columns of the slot machine, the loop runs to where it also places the images into the predetermined positions by referencing the images from an array that was discussed in Variables & Data Tracking, I used an array to store the image used, so in the future, it will be easier to cross reference to see if a player filled a row or column on the slot machine. To make sure the spacing of the images was correct, I firstly make the X value of the image, equivalent to 350 + which iteration the loop was on, multiplied by 185 which after trial and error, I figured out was an equal distance for each box of the slot machine, not only did I have to make the symbols go horizontally, they also needed to go down vertically for the columns, in which I used a very similar method, where I used 150 as my base, plus which iteration of the for loop for rows was on multiplied by 160, after multiple attempts of trial and error, I was able to get these values, that make the game look symmetrical and even. The snippet of the for loop is down below:
-
+```
 int r = 0;
 for (int row = 0; row < 4; row++) { // for loop to randomize row image numbers
     for (int col = 0; col < 5; col++) { // same thing but for columns
@@ -18,19 +18,19 @@ for (int row = 0; row < 4; row++) { // for loop to randomize row image numbers
     }    
   }
 }
-
+```
 # Arrays & Data Structures
 
 An important array I used that is referenced throughout my code is my image array, on the first day of coding, I created this array for ease of access as discussed in the planning documentation section, this helped me access images without having to reference them manually every time I wanted to use them, and because I use a lot of images for symbols throughout my slot machine game, this was a necessary feature for my code, but there were also other reasons this decision helped me and is still currently helping me, working in class on my code on Tuesday, a couple of classmates had mentioned that the probability was extremely low on creating winning rows and columns, seeing this as a vital issue, as no player wants to play a game where they would never win, I created a vital solution to this issue, making the probabilities for each symbol would be extremely hard, and would take a lot of extra code, instead I had an idea that was not only easier, but also more efficient, I created multiple of the same images in the array, you may be thinking that I created one image twice to double the odds, but instead I wanted to have a fair playing field throughout all symbols, so I decided to create 100 extra images, I decided that I wanted to split a percentage to all the possible symbols, for example, many of the fruits have a 10% chance of appearing, while rarer items like sevens have a 3% chance of dropping, this was used to ensure fairer odds and keep players interested in the game while also keeping them engaged and not letting them win every time the lever was pulled down.
-
+```
 PImage[] imgs = new PImage[102]; // 100 images for symbols, 1 for the starting screen and one for the background of the main menu
 
 symbols[i] = int(random(1, 101));
-
+```
 # Selection Structures
 
 In my game, I used control structures in multiple places as necessary, for example one problem I faced was when I needed a way for users to add or subtract from their bet, an easy way I found a solution was to use processings built in function for checking mouse inputs, when players left click on their mouse in a specific area, the bet increases while if they right click, the bet decreases, this was to insure easy use within the user. Implementing this idea originally was not that easy, at first I used the mousePressed function, and used an if statement within the mousePressed method that checks if the user is clicking within the area of the circle, even though this is a solution, I didn’t really like it because it removed a lot of the bet at once, instead of intervals of 20 chips per click, that’s when I decided to implement my new idea, which then worked, when players click, it only removes 20 chips per left click or right click, even though this method takes users longer to increase the bet to the desired value, with the other method, you wouldn't be able to stop the bet on the users desired value, because it would increase and decrease the bet too fast when clicking.
-
+```
  if (mousePressed && mouseX > 1275 && mouseX < 1375 && mouseY > 680 && mouseY < 780 && startGame) {
    if (mouseButton == LEFT && betamount < chips && betamount < 999) {
       betamount += 20;
@@ -38,7 +38,7 @@ In my game, I used control structures in multiple places as necessary, for examp
       betamount -= 20;
     }
   }
-
+```
 
 # Use of Custom Functions & Error Checking/Restrictions
 
